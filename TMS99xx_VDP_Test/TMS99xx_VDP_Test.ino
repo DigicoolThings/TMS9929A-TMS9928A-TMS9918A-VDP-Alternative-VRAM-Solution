@@ -51,7 +51,6 @@ uint8_t readByteVDP(bool vramOrRegister) {
   // Set data IO pins as inputs
   DDRD = DDRD & 0x0F; // PD4..PD7 as inputs
   DDRC = DDRC & 0xF0; // PC0..PC3 as inputs
-  // Set output data byte  
   // Set MODE pin for Register or VRAM access
   digitalWrite(MODE, vramOrRegister);        
   // Pulse Chip Select Read and read byte 
